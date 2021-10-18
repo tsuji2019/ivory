@@ -1,0 +1,17 @@
+extends ../_include/_layout
+
+append headBottom
+  link(rel="stylesheet", href="/assets/css/under.css")
+
+block var
+  - pageId = 'under'
+  - pageOgpType= 'article';
+
+block content
+  body
+    include ../_include/common/_header
+
+    main
+      include ../_include/under/_sample
+
+    include ../_include/common/_footer

@@ -1,0 +1,38 @@
+* {
+	box-sizing: border-box;
+	font-feature-settings: 'palt' 1;
+}
+html,
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	position: relative;
+	overflow: hidden;
+}
+html {
+	font-family: $font-default;
+	width: 100%;
+	height: 100%;
+	font-size: px2vw(10);
+	font-weight: 400;
+	overflow: auto;
+  @include sp {
+    font-size: px2vw(10, 375);
+  }
+}
+body {
+	position: relative;
+	color: $black;
+	letter-spacing: 0.2em;
+}
+img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: top;
+	line-height: 1;
+	border: none;
+}
+a {
+	text-decoration: none;
+}
+

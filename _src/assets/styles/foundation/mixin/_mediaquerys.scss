@@ -1,0 +1,27 @@
+/****
+ _breakpoint
+****/
+$breakpoint-ss: 414px;
+$breakpoint-s: 769px;
+$breakpoint-m: 834px;
+$breakpoint-l: 1280px;
+$breakpoint-xl: 1380px;
+
+$breakpoints: (
+  'ss': 'only screen and (max-width: #{$breakpoint-ss - 1px})',
+  's': 'only screen and (max-width: #{$breakpoint-s - 1px})',
+  'm': 'only screen and (max-width: #{$breakpoint-l - 1px})',
+  'l': 'only screen and (max-width: #{$breakpoint-xl - 1px})',
+  'xl': 'only screen and (min-width: #{$breakpoint-xl})',
+  'pc': 'only screen and (min-width: #{$breakpoint-s})',
+  'full': 'only screen and (min-width: #{$breakpoint-l})',
+) !default;
+
+$range-breakpoints: (
+  's':
+    'only screen and (min-width: #{$breakpoint-ss}) and (max-width: #{$breakpoint-m - 1px})',
+  'm':
+    'only screen and (min-width: #{$breakpoint-s}) and (max-width: #{$breakpoint-l - 1px})',
+  'l':
+    'only screen and (min-width: #{$breakpoint-l}) and (max-width: #{$breakpoint-xl - 1px})',
+) !default;

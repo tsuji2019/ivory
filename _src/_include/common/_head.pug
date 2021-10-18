@@ -1,0 +1,23 @@
+meta(charset="utf-8")
+meta(name="viewport", content="width=device-width,initial-scale=1,user-scalable=0")
+meta(http-equiv="X-UA-Compatible", content="ie=edge")
+meta(name="format-detection" content="telephone=no")
+title #{metas[pageId].title}
+meta(name="description" content=metas[pageId].description)
+//- meta(name="keywords" content=metas[pageId].keywords)
+//- ogp
+meta(property="og:title" content=metas[pageId].og_title)
+meta(property="og:description" content=metas[pageId].og_description)
+meta(property="og:url" content=metas[pageId].og_url)
+meta(property="og:image" content=metas.common.og_image)
+meta(property="og:type" content=metas[pageId].og_type)
+meta(property="og:site_name" content=metas.common.og_site_name)
+meta(property="og:locale" content="ja_JP")
+meta(name="twitter:card" content=metas.common.tw_card)
+meta(name="twitter:title" content=metas[pageId].tw_title)
+meta(name="twitter:description" content=metas[pageId].tw_description)
+meta(name="twitter:image" content=metas.common.og_image)
+//- favicon
+link(rel="shortcut icon" href=metas.common.favicon)
+//- css
+link(rel="stylesheet", href=metas.common.path+"assets/css/common.css")

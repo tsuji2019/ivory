@@ -1,0 +1,18 @@
+block var
+
+doctype html
+html(lang="ja")
+  head(prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# " + pageOgpType + ": http://ogp.me/ns/" + pageOgpType + "#")
+    include ./common/_ga
+    include ./common/_head
+    block headBottom
+
+  block content
+
+  //- js
+  script(src=metas.common.path+"assets/js/main.js" defer)
+
+  if pageId ==='index'
+    script(src=metas.common.path+"assets/js/top.js" defer)
+  if pageId ==='under'
+    script(src=metas.common.path+"assets/js/under.js" defer)

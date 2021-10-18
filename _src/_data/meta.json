@@ -1,0 +1,35 @@
+{
+	"metas": {
+		"common": {
+			"path": "/",
+			"og_site_name": "sitename",
+			"og_image": "https://sitename/assets/images/og/ogp.jpg",
+			"tw_card": "summary_large_image",
+			"favicon": "https://sitename/favicon.ico"
+		},
+		"index": {
+			"id": "index",
+			"path": "/",
+			"title": "sitename",
+			"og_title": "sitename",
+			"tw_title": "sitename",
+			"description": "description",
+			"og_description": "description",
+			"tw_description": "description",
+			"og_url": "https://sitename/",
+			"og_type": "website"
+		},
+		"under": {
+			"id": "under",
+			"path": "/under/",
+			"title": "sitename",
+			"og_title": "sitename",
+			"tw_title": "sitename",
+			"description": "description",
+			"og_description": "description",
+			"tw_description": "description",
+			"og_url": "https://sitename/under/",
+			"og_type": "article"
+		}
+	}
+}
