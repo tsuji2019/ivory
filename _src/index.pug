@@ -1,7 +1,7 @@
 extends ./_include/_layout
 
 append headBottom
-  link(rel="stylesheet", href="/assets/css/top.css")
+  link(rel="stylesheet" href="/assets/css/top.css")
 
 block var
   - pageId = 'index'
@@ -12,6 +12,8 @@ block content
     include _include/common/_header
 
     main
-      include _include/top/_sample
+      include _include/top/_main
+      include _include/top/_works
+      include _include/top/_about
 
     include _include/common/_footer

@@ -1,0 +1,22 @@
+#---------------- Defalt files
+_dist/
+_compress
+.editorconfig
+.node-version
+#---------------- OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+#----------------  nodemodules
+node_modules/*
+#----------------  vscode files
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
