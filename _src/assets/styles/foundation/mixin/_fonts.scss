@@ -1,7 +1,7 @@
 /* Google Font
 ---------------------------- */
-@import url("https://fonts.googleapis.com/css2?family=Crimson+Text&family=Marcellus+SC&family=Noto+Serif+SC&family=Playfair+Display&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Belleza&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@300;400;500;700;900&display=swap");
 
 /* Adobe Font
 ---------------------------- */
@@ -9,6 +9,7 @@
 
 /* Font Config
 ---------------------------- */
-$font-default: "Roboto", "Yu Gothic Medium", "YuGothic",
-  "Hiragino Kaku Gothic ProN", Meiryo sans-serif !default;
-$font-en: orpheuspro, serif;
+$font-jp: "Zen Kaku Gothic Antique", "Noto Sans JP", "Hiragino Kaku Gothic ProN",
+  Meiryo sans-serif !default;
+$font-en001: orpheuspro, serif;
+$font-en002: "Zen Kaku Gothic Antique", sans-serif;

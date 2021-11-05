@@ -1,50 +1,72 @@
 #header {
   position: fixed;
-  height: 70px;
+  height: auto;
   width: 100%;
-  //   display: flex;
-  //   justify-content: space-between;
-  //   align-items: center;
   color: #fff;
-  text-align: right;
-  padding: 20px;
+  padding: 3rem;
+  z-index: 100;
+  nav {
+    position: absolute;
+    right: 3rem;
+    ul {
+      li {
+        margin-bottom: 1.8rem;
+        transition: all 0.5s;
+        text-align: right;
+        a {
+          font-family: $font-en002;
+          color: #000;
+          font-size: 2.6rem;
+          font-weight: 400;
+          letter-spacing: 0;
+          transition: all 0.5s;
+          position: relative;
+          display: inline-block;
+          &::before {
+            position: absolute;
+            top: 0;
+            left: -0.2rem;
+            z-index: -1;
+            width: calc(100% + 0.4rem);
+            height: calc(100% + 0.4rem);
+            background-color: #000;
+            content: "";
+            transition: transform 0.3s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+            transform: scale(0, 1);
+            transform-origin: right top;
+          }
+        }
+        &:hover {
+          @include pc {
+            transition: all 0.5s;
+            a {
+              color: #fd7e00;
+              &::before {
+                transform-origin: left top;
+                transform: scale(1, 1);
+              }
+            }
+          }
+        }
+      }
+      li.current {
+        transition: all 0.5s;
+        a {
+          color: #fd7e00;
+          &::before {
+            transform-origin: left top;
+            transform: scale(1, 1);
+          }
+        }
+      }
+    }
+  }
 }
-
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
-nav ul li a {
-  display: block;
-  text-decoration: none;
-  color: #666;
-  padding: 10px;
-  transition: all 0.3s;
-}
-
-nav ul li.current a,
-nav ul li a:hover {
-  color: #fff;
-}
-@media screen and (max-width: 768px) {
+@include sp {
   nav ul li a:hover {
-    color: #666;
+    color: #000;
   }
   nav ul li.current a {
     color: #fff;
   }
-}
-section {
-  padding: 30px;
-}
-
-section:nth-child(1) {
-  padding: 100px 30px 30px;
-}
-
-section:nth-child(2n) {
-  background: #f3f3f3;
 }
