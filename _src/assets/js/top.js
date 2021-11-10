@@ -1,7 +1,9 @@
 // import slider from "./modules/slider";
+import parallax from "./modules/parallax";
 
 document.addEventListener("DOMContentLoaded", () => {
   // slider();
+  parallax();
 });
 
 // h1のテキストアニメーション

@@ -1,3 +1,86 @@
 #about {
   padding-top: 100rem;
+
+  .prlx__parent {
+    border: 1px solid #000;
+    margin-bottom: 50px;
+  }
+
+  .img__wrapper {
+    position: relative;
+    /*   top: 400px; */
+  }
+
+  img {
+    width: 300px;
+  }
+
+  .scrollspy-example {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .img--invis {
+    display: block;
+    transition: 1.5s ease;
+    opacity: 0;
+    transform: translateY(50px) scale(0.9);
+    width: 25%;
+    max-width: 25%;
+    border: 8px solid #fff;
+
+    $num: 0;
+    @for $i from 1 through 20 {
+      @debug $num;
+      &:nth-child(#{$i}) {
+        transition-delay: #{$num * 0.2}s;
+      }
+
+      $num: $num + 1;
+      @if $num >= 4 {
+        $num: 0;
+      }
+    }
+
+    img {
+      object-fit: cover;
+      width: 100%;
+    }
+
+    &.show {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+
+    @media (max-width: 768px) {
+      width: 50%;
+      max-width: 50%;
+
+      $num: 0;
+      @for $i from 1 through 20 {
+        @debug $num;
+        &:nth-child(#{$i}) {
+          transition-delay: #{$num * 0.2}s;
+        }
+
+        $num: $num + 1;
+        @if $num >= 2 {
+          $num: 0;
+        }
+      }
+    }
+  }
+
+  h3 {
+    text-align: right;
+  }
+
+  body {
+    min-height: 4000px;
+    margin-top: 400px;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
 }
