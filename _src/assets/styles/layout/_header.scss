@@ -16,7 +16,7 @@
         a {
           font-family: $font-en002;
           color: #000;
-          font-size: 2.6rem;
+          font-size: 2.4rem;
           font-weight: 400;
           letter-spacing: 0;
           transition: all 0.5s;
@@ -40,7 +40,7 @@
           @include pc {
             transition: all 0.5s;
             a {
-              color: #fd7e00;
+              color: $orange;
               &::before {
                 transform-origin: left top;
                 transform: scale(1, 1);
@@ -52,7 +52,7 @@
       li.current {
         transition: all 0.5s;
         a {
-          color: #fd7e00;
+          color: $orange;
           &::before {
             transform-origin: left top;
             transform: scale(1, 1);

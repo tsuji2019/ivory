@@ -1,6 +1,10 @@
-small {
-  color: $black;
-  display: block;
-  text-align: center;
-  padding: 20px;
+#footer {
+  padding-top: -100rem;
+  margin-top: 130rem;
+  small {
+    color: $black;
+    display: block;
+    text-align: center;
+    padding: 20px;
+  }
 }

@@ -38,7 +38,7 @@ a {
 
 // base
 body {
-  background-color: #fd7e00;
+  background-color: $orange;
 }
 
 // 追加
@@ -54,4 +54,20 @@ section:nth-child(2n) {
 }
 a {
   cursor: pointer;
+}
+
+// 背景色変更
+// .wrap {
+//   margin: 100px auto 0;
+// }
+
+.block-bg {
+  transition: all 0.7s ease;
+  position: relative;
+  z-index: 0;
+}
+
+.block {
+  // height: auto;
+  // text-align: center;
 }

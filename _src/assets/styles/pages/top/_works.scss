@@ -1,4 +1,6 @@
 #works {
+  margin: 6rem 4rem 0;
+  margin-bottom: 1rem;
   ul {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -9,6 +11,7 @@
     align-items: flex-end;
     flex-wrap: nowrap;
     position: relative;
+    margin-top: 8rem;
     li {
       .works-text {
         position: absolute;
@@ -27,26 +30,36 @@
             left: 0;
             bottom: 1rem;
             font-size: 6rem;
-            color: #fd7e00;
+            color: $green;
             z-index: -1;
-            mix-blend-mode: lighten;
+            // mix-blend-mode: lighten;
           }
           .title-en-white {
             font-family: $font-en001;
             position: relative;
-            width: 20%;
-            height: 12rem;
+            height: 7rem;
             overflow: hidden;
             &::after {
               font-family: $font-en001;
               position: absolute;
               left: 0;
               bottom: 1rem;
-              content: "Ryoujyuen Inc";
               white-space: pre;
               font-size: 6rem;
               color: black;
               z-index: 1;
+            }
+          }
+          .title-w01 {
+            width: 20%;
+            &::after {
+              content: "Ryoujyuen Inc";
+            }
+          }
+          .title-w02 {
+            width: 13%;
+            &::after {
+              content: "go_en";
             }
           }
         }
@@ -64,10 +77,10 @@
         a {
           font-family: $font-en002;
           color: #000;
-          font-size: 1.5rem;
+          font-size: 1.3rem;
           font-weight: 400;
           letter-spacing: 0;
-          padding-bottom: 1.8rem;
+          padding-bottom: 2rem;
           width: 100%;
           position: relative;
           display: inline-block;
@@ -119,18 +132,99 @@
           right: 0;
           bottom: 0;
           left: 0;
-          background-color: rgba(0, 0, 0, 0.1);
           transition: transform 1.8s $easeOutCubic, opacity 0.3s $linear;
+          z-index: 1;
         }
         img.imagebig {
           transform: scale(1.1, 1.1);
           transition: transform 1.8s $easeOutCubic, opacity 0.3s $linear;
         }
         img.imagebig::before {
-          background-color: rgba(0, 0, 0, 0);
           transition: transform 1.8s $easeOutCubic, opacity 0.3s $linear;
         }
       }
     }
+    &:first-child {
+      margin-top: 0;
+    }
   }
+  // 実績タイトルアニメーション
+  .bgextend {
+    animation-name: bgextendAnimeBase;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+  }
+
+  @keyframes bgextendAnimeBase {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  .bgappear {
+    animation-name: bgextendAnimeSecond;
+    animation-duration: 1s;
+    animation-delay: 0.6s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+  }
+
+  @keyframes bgextendAnimeSecond {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .bgLRextend::before {
+    animation-name: bgLRextendAnime;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    // width: 30%;
+    height: 100%;
+    background-color: #000;
+    z-index: 100;
+  }
+  .num01 .bgLRextend::before {
+    width: 30%;
+  }
+  .num02 .bgLRextend::before {
+    width: 13%;
+  }
+
+  @keyframes bgLRextendAnime {
+    0% {
+      transform-origin: left;
+      transform: scaleX(0);
+    }
+    60% {
+      transform-origin: left;
+      transform: scaleX(1);
+    }
+    60.001% {
+      transform-origin: right;
+    }
+    100% {
+      transform-origin: right;
+      transform: scaleX(0);
+    }
+  }
+
+  // .bgappearTrigger,
+  // .bgLRextendTrigger {
+  //   opacity: 0;
+  // }
 }
