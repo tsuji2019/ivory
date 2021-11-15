@@ -1,6 +1,27 @@
 #works {
   margin: 6rem 4rem 0;
   margin-bottom: 1rem;
+  h2 {
+    font-family: $font-en002;
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-align: left;
+    margin: 0 0 3rem 0;
+    padding-left: 1.8rem;
+    position: relative;
+    letter-spacing: 0;
+    &::after {
+      content: "";
+      display: block;
+      width: 0.8rem;
+      height: 0.8rem;
+      background-color: #000;
+      border-radius: 50%;
+      position: absolute;
+      top: 0.4rem;
+      left: 0;
+    }
+  }
   ul {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -29,7 +50,7 @@
             position: absolute;
             left: 0;
             bottom: 1rem;
-            font-size: 6rem;
+            font-size: 5rem;
             color: $green;
             z-index: -1;
             // mix-blend-mode: lighten;
@@ -45,7 +66,7 @@
               left: 0;
               bottom: 1rem;
               white-space: pre;
-              font-size: 6rem;
+              font-size: 5rem;
               color: black;
               z-index: 1;
             }

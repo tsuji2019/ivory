@@ -58,7 +58,7 @@ $(function () {
   var secArr = new Array();
   var current = -1;
   /* ここに背景色を順に記述する*/
-  var secColor = new Array('#f4551f', '#45b7b7', '#a74faf', '#f4551f');
+  var secColor = new Array('#EB5E0B', '#5EAAA8', '#a74faf', '#f4551f');
   $('.block').each(function (i) {
     secArr[i] = $(this).offset().top;
   });

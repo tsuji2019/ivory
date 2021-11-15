@@ -12,7 +12,7 @@ export default function (selector) {
 
 		var PrlxRAF = function (parent, child, opts) {
 			var defaults = {
-				speed: .4,
+				speed: .5,
 				direction: 'y',
 				everyStep: null,
 				type: 'parallax', // parallax, scrollspy
@@ -150,36 +150,36 @@ export default function (selector) {
 		/////////////////////////////////////////
 		//             EXAMPLES                //
 		/////////////////////////////////////////
-		let prlx1 = new PrlxRAF('.prlx__parent1', '.prlx__child', {
-			speed: .2
-		})
+		// let prlx1 = new PrlxRAF('.prlx__parent1', '.prlx__child', {
+		// 	speed: .2
+		// })
 
 
 		let prlx2 = new PrlxRAF('.prlx__parent2', '.prlx__child', {
-			speed: -.3,
+			speed: .3,
 			direction: 'x'
 		})
 
 
 
-		let rotate = 0;
-		let prlx3 = new PrlxRAF('.prlx__parent3', '.prlx__child', {
-			speed: .2,
-			everyStep: function (elm) {
-				rotate++
-				elm.querySelector('img').style.transform = `rotate(${rotate}deg)`
-			}
-		})
+		// let rotate = 0;
+		// let prlx3 = new PrlxRAF('.prlx__parent3', '.prlx__child', {
+		// 	speed: .2,
+		// 	everyStep: function (elm) {
+		// 		rotate++
+		// 		elm.querySelector('img').style.transform = `rotate(${rotate}deg)`
+		// 	}
+		// })
 
 
-		let prlx4 = new PrlxRAF('.prlx__parent4', '.prlx__child', {
-			type: 'scrollspy',
-			offset: 100,
-			scrollspy: {
-				reverse: true,
-				class: 'show'
-			}
-		})
+		// let prlx4 = new PrlxRAF('.prlx__parent4', '.prlx__child', {
+		// 	type: 'scrollspy',
+		// 	offset: 100,
+		// 	scrollspy: {
+		// 		reverse: true,
+		// 		class: 'show'
+		// 	}
+		// })
 	}
 
 	init();
