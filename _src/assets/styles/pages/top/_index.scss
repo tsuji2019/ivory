@@ -1,3 +1,32 @@
+// マウスストーカー
+.sample {
+  width: 100%;
+}
+#stalker {
+  pointer-events: none;
+  position: fixed;
+  top: -0.5rem;
+  left: -0.5rem;
+  width: 1rem;
+  height: 1rem;
+  background: $green;
+  opacity: 1;
+  border-radius: 50%;
+  transition: transform 0.2s, top, 0.5s, left 0.5s, width 0.5s, height 0.5s,
+    background-color 0.3s;
+  transition-timing-function: ease-out;
+  z-index: 999;
+  &.hov_ {
+    top: -7.9rem;
+    left: 1.9rem;
+    width: 14rem;
+    height: 14rem;
+    transition: 0.3s;
+    background: $green;
+    opacity: 0.8;
+    mix-blend-mode: hard-light;
+  }
+}
 #main {
   position: relative;
   &::after {

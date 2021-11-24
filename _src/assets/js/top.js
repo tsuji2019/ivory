@@ -1,8 +1,10 @@
 // import slider from "./modules/slider";
+import mousestalker from "./modules/mousestalker";
 import parallax from "./modules/parallax";
 
 document.addEventListener("DOMContentLoaded", () => {
   // slider();
+  mousestalker();
   parallax();
 });
 
@@ -58,7 +60,7 @@ $(function () {
   var secArr = new Array();
   var current = -1;
   /* ここに背景色を順に記述する*/
-  var secColor = new Array('#EB5E0B', '#5EAAA8', '#a74faf', '#f4551f');
+  var secColor = new Array('#ff7e28', '#ff7e28', '#f0ecdf', '#f0ecdf');
   $('.block').each(function (i) {
     secArr[i] = $(this).offset().top;
   });
