@@ -5,7 +5,7 @@
     .prlx__parent {
       margin-bottom: 50px;
       position: absolute;
-      right: -14rem;
+      right: -21rem;
       z-index: 1;
     }
 
@@ -178,34 +178,74 @@
       top: 16.7rem;
       left: 0;
       width: 88%;
-      height: 107rem;
+      height: 111rem;
       background-color: $orange;
       z-index: -1;
     }
   }
   .about-mine {
     width: 100%;
-    background-color: #eb5e0b;
+    padding-top: 10rem;
+    &__images {
+      position: relative;
+      &::before {
+        z-index: 1;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(
+          rgba(195, 0, 255, 0.1),
+          rgba(195, 0, 255, 0.4)
+        );
+        mix-blend-mode: color-burn;
+        content: "";
+        position: absolute;
+        top: 0;
+      }
+    }
+    &__profile {
+      background-color: $orange;
+      padding: 10rem 0;
+      ul {
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+        width: 66%;
+        li {
+          p {
+            font-family: $font-en001;
+            font-size: 3rem;
+            font-weight: 400;
+            font-style: normal;
+            line-height: 0.8;
+            letter-spacing: -0.02em;
+          }
+          dl {
+            margin-top: 2rem;
+            font-size: 1.4rem;
+            dt {
+              padding-bottom: 0.8rem;
+              font-weight: 400;
+            }
+          }
+        }
+      }
+    }
     // パララックス
     .first-v2 {
       position: relative;
-      background: url(../image/1.jpeg);
+      background: url(/assets/images/profile-bg.jpg);
       background-size: cover;
       height: 0%;
-      padding-top: unquote("min(100vh,75%)");
-      p {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: #fff;
-        line-height: 1.5;
-        font-size: unquote("max(3vw, 16px)");
-      }
-    }
-    &__images {
-    }
-    &__profile {
+      padding-top: unquote("min(100vh,35%)");
+      // p {
+      //   position: absolute;
+      //   top: 50%;
+      //   left: 50%;
+      //   transform: translate(-50%, -50%);
+      //   color: #fff;
+      //   line-height: 1.5;
+      //   font-size: unquote("max(3vw, 16px)");
+      // }
     }
   }
 }
