@@ -59,7 +59,7 @@ $(window).on('load', function () {
 $(function () {
   var secArr = new Array();
   var current = -1;
-  var secColor = new Array('#eb5e0b', '#eb5e0b', '#f0ecdf', '#f0ecdf');
+  var secColor = new Array('#f43b00', '#f43b00', '#f0ecdf', '#f0ecdf');
   $('.block').each(function (i) {
     secArr[i] = $(this).offset().top;
   });

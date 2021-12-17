@@ -5,44 +5,83 @@
 
   h1 {
     font-family: $font-en001;
-    font-size: 20rem;
-    font-weight: 400;
+    font-size: 14.1rem;
+    font-weight: 900;
     font-style: normal;
     line-height: 0.8;
-    letter-spacing: -1rem;
+    span {
+      color: $pink;
+    }
   }
-  ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -ms-flex-line-pack: end;
-    align-content: flex-end;
-    li {
-      display: inline;
-      margin-top: 7rem;
-      vertical-align: bottom;
-      position: relative;
-      p {
-        font-family: $font-en002;
-        font-size: 1.8rem;
-        font-weight: 400;
-        // font-style: italic;
-        line-height: 1.2;
-        letter-spacing: 0.02em;
-      }
-      p.email {
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        text-align: right;
-        font-size: 1.4rem;
-        color: $white;
+  p {
+    font-family: $font-en002;
+    font-size: 2.4rem;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: $pink;
+  }
+  .main-image {
+    margin: 0 auto;
+    text-align: center;
+    width: 60rem;
+    img {
+      width: 100%;
+    }
+  }
+  .scroll {
+    &__text {
+      background: url(/assets/images/scroll.png) no-repeat;
+      background-size: cover;
+      margin: 0 auto;
+      width: 20rem;
+      height: 20rem;
+      animation: rotate-anime 1s linear infinite;
+
+      @keyframes rotate-anime {
+        0% {
+          transform: rotate(0);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
       }
     }
   }
+
+  // ul {
+  //   display: -webkit-box;
+  //   display: -ms-flexbox;
+  //   display: flex;
+  //   -webkit-box-pack: justify;
+  //   -ms-flex-pack: justify;
+  //   justify-content: space-between;
+  //   -ms-flex-line-pack: end;
+  //   align-content: flex-end;
+  //   li {
+  //     display: inline;
+  //     margin-top: 7rem;
+  //     vertical-align: bottom;
+  //     position: relative;
+  //     p {
+  //       font-family: $font-en002;
+  //       font-size: 2.2rem;
+  //       font-weight: 700;
+  //       // font-style: italic;
+  //       line-height: 1.2;
+  //       letter-spacing: 0.02em;
+  //       color: $pink;
+  //     }
+  //     p.email {
+  //       position: absolute;
+  //       bottom: 0;
+  //       right: 0;
+  //       text-align: right;
+  //       font-size: 1.4rem;
+  //       color: $white;
+  //     }
+  //   }
+  // }
 }
 
 // h1のテキストアニメーション
@@ -50,8 +89,8 @@
   display: flex;
   flex-wrap: wrap;
   overflow: hidden;
-  padding: 3rem 0;
-  width: 50%;
+  padding: 3rem 0 2rem;
+  width: 100%;
 }
 
 .main-title span {

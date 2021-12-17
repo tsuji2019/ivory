@@ -21,7 +21,8 @@
         letter-spacing: -1rem;
         text-align: right;
         padding: 1rem 0;
-        color: #eb5e0b;
+        color: $pink;
+        opacity: 0.6;
       }
     }
     .scrollspy-example {
@@ -193,8 +194,8 @@
         height: 100%;
         width: 100%;
         background: linear-gradient(
-          rgba(195, 0, 255, 0.1),
-          rgba(195, 0, 255, 0.4)
+          rgba(255, 156, 198, 0.9),
+          rgba(255, 156, 198, 0.9)
         );
         mix-blend-mode: color-burn;
         content: "";
@@ -233,7 +234,7 @@
     // パララックス
     .first-v2 {
       position: relative;
-      background: url(/assets/images/profile-bg.jpg);
+      background: url(/assets/images/profile-bg.png);
       background-size: cover;
       height: 0%;
       padding-top: unquote("min(100vh,35%)");
