@@ -1,10 +1,12 @@
 // import slider from "./modules/slider";
 import mousestalker from "./modules/mousestalker";
+import pageTop from "./modules/pageTop";
 import parallax from "./modules/parallax";
 
 document.addEventListener("DOMContentLoaded", () => {
   // slider();
   mousestalker();
+  pageTop();
   parallax();
 });
 

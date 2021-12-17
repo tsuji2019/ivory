@@ -29,41 +29,77 @@
     img {
       width: 100%;
     }
-  }
-  .scroll {
-    position: absolute;
-    top: 7rem;
-    right: -9.5rem;
-    width: 20rem;
-    height: 20rem;
-    &__text {
-      background: url("/assets/images/scroll.png") no-repeat;
-      background-size: cover;
+    .scroll {
+      position: absolute;
+      top: 7rem;
+      right: -9.5rem;
       width: 20rem;
       height: 20rem;
-      animation: rotate-anime 10s linear infinite;
-      position: absolute;
-      top: 0;
-      right: 0;
-      @keyframes rotate-anime {
-        0% {
-          transform: rotate(0);
-        }
-        100% {
-          transform: rotate(360deg);
+      &__text {
+        background: url("/assets/images/scroll.png") no-repeat;
+        background-size: cover;
+        width: 20rem;
+        height: 20rem;
+        animation: rotate-anime 10s linear infinite;
+        position: absolute;
+        top: 0;
+        right: 0;
+        @keyframes rotate-anime {
+          0% {
+            transform: rotate(0);
+          }
+          100% {
+            transform: rotate(360deg);
+          }
         }
       }
+      svg {
+        fill: $pink;
+        width: 4.1rem;
+        height: 8.6rem;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        margin: auto;
+      }
     }
-    svg {
-      fill: $pink;
-      width: 4.1rem;
-      height: 8.6rem;
+    .comment {
+      font-family: $font-en001;
+      font-size: 2.6rem;
+      line-height: 1.2;
+      letter-spacing: 0.02em;
+      color: $pink;
+      transform: rotate(4deg);
       position: absolute;
-      top: 0;
-      bottom: 0;
-      right: 0;
-      left: 0;
-      margin: auto;
+      bottom: 12rem;
+      left: -18rem;
+      text-align: left;
+      &::before {
+        content: "";
+        display: block;
+        width: calc(100% - 11.6rem);
+        height: 0.1rem;
+        background-color: $pink;
+        position: absolute;
+        top: -2rem;
+        right: 0rem;
+        margin: auto;
+        transform: rotate(16deg);
+      }
+      &::after {
+        content: "";
+        display: block;
+        width: calc(100% - 11.6rem);
+        height: 0.1rem;
+        background-color: $pink;
+        position: absolute;
+        right: -1rem;
+        bottom: -3rem;
+        margin: auto;
+        transform: rotate(-16deg);
+      }
     }
   }
 

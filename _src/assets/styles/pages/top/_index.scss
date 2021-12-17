@@ -29,18 +29,18 @@
 }
 #main {
   position: relative;
-  &::after {
-    content: "";
-    display: block;
-    width: calc(100% - 11.6rem);
-    height: 0.1rem;
-    background-color: $pink;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-  }
+  // &::after {
+  //   content: "";
+  //   display: block;
+  //   width: calc(100% - 11.6rem);
+  //   height: 0.1rem;
+  //   background-color: $pink;
+  //   position: absolute;
+  //   bottom: 0;
+  //   left: 0;
+  //   right: 0;
+  //   margin: auto;
+  // }
 }
 section {
   position: relative;
