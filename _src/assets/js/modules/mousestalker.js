@@ -5,13 +5,11 @@ export default function (selector) {
 	}
 
 	const mousestalker = () => {
-		//マウスストーカー用のdivを取得
 		const stalker = document.getElementById('stalker');
 
 		//aタグにホバー中かどうかの判別フラグ
 		let hovFlag = false;
 
-		//マウスに追従させる処理 （リンクに吸い付いてる時は除外する）
 		document.addEventListener('mousemove', function (e) {
 			if (!hovFlag) {
 				stalker.style.transform = 'translate(' + e.clientX + 'px, ' + e.clientY + 'px)';

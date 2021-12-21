@@ -8,7 +8,7 @@ export default function (selector) {
 		function PageTopAnime() {
 
 			var scroll = $(window).scrollTop();
-			if (scroll >= 1000) {
+			if (scroll >= 700) {
 				$('#page-top').removeClass('DownMove');
 				$('#page-top').addClass('UpMove');
 			} else {

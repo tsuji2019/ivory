@@ -1,27 +1,28 @@
-import Swiper, { Pagination } from 'swiper';
+import Swiper, {
+	Pagination
+} from 'swiper';
 
-export default function(selector) {
-  const init = () => {
-    slider();
-  }
+export default function (selector) {
+	const init = () => {
+		Slider();
+	}
 
-	const slider = () => {
-		const swiper = new Swiper('.swiper-container', {
-			autoplay: {
-				delay : 5000,
-				disableOnInteraction : false,
-			},
-			speed: 800,
+	const Slider = () => {
+		var swiper = new Swiper(".mySwiper", {
+			slidesPerView: "3",
+			spaceBetween: 20,
 			loop: true,
-			effect: 'fade',
 			pagination: {
-				el: '.swiper-pagination',
-				type: 'bullets',
-				clickable: true,
-				renderBullet: function (index, className) {
-					return '<span class="' + className + '">' + (index + 1) + ' - 5' + '</span>';
-				}
+				el: ".swiper-pagination",
+				type: "progressbar",
 			},
+			navigation: {
+				nextEl: ".swiper-button-next",
+				prevEl: ".swiper-button-prev",
+			},
+			// autoplay: {
+			// 	disableOnInteraction: false,
+			// }
 		});
 	}
 

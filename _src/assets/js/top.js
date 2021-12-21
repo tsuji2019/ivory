@@ -1,12 +1,14 @@
 // import slider from "./modules/slider";
 import mousestalker from "./modules/mousestalker";
 import pageTop from "./modules/pageTop";
-import parallax from "./modules/parallax";
+import parallax from "./modules/slider";
+import slider from "./modules/parallax";
 
 document.addEventListener("DOMContentLoaded", () => {
   // slider();
   mousestalker();
   pageTop();
+  slider();
   parallax();
 });
 
@@ -61,7 +63,7 @@ $(window).on('load', function () {
 $(function () {
   var secArr = new Array();
   var current = -1;
-  var secColor = new Array('#f43b00', '#f43b00', '#f0ecdf', '#f0ecdf');
+  var secColor = new Array('#f43b00', '#f43b00', '#0067c0', '#0067c0');
   $('.block').each(function (i) {
     secArr[i] = $(this).offset().top;
   });

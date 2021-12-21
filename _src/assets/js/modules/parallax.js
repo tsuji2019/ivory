@@ -150,9 +150,9 @@ export default function (selector) {
 		/////////////////////////////////////////
 		//             EXAMPLES                //
 		/////////////////////////////////////////
-		// let prlx1 = new PrlxRAF('.prlx__parent1', '.prlx__child', {
-		// 	speed: .2
-		// })
+		let prlx1 = new PrlxRAF('.prlx__parent1', '.prlx__child', {
+			speed: .2
+		})
 
 
 		let prlx2 = new PrlxRAF('.prlx__parent2', '.prlx__child', {

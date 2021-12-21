@@ -24,8 +24,9 @@
   transition: all 0.3s;
   position: relative;
   .comment {
-    font-family: $font-en001;
+    font-family: $font-en002;
     font-size: 1.4rem;
+    font-weight: 700;
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: $pink;
@@ -60,9 +61,18 @@
     }
   }
 }
-
-#page-top a:hover {
-  // background: #777;
+@include pc {
+  #page-top a:hover {
+    animation: key1 0.3s ease infinite alternate;
+    @keyframes key1 {
+      0% {
+        transform: translateY(0px);
+      }
+      100% {
+        transform: translateY(-10px);
+      }
+    }
+  }
 }
 
 // リンクを右下に固定
