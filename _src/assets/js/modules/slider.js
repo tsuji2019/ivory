@@ -20,9 +20,9 @@ export default function (selector) {
 				nextEl: ".swiper-button-next",
 				prevEl: ".swiper-button-prev",
 			},
-			// autoplay: {
-			// 	disableOnInteraction: false,
-			// }
+			autoplay: {
+				disableOnInteraction: false,
+			}
 		});
 	}
 

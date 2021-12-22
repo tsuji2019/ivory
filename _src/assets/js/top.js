@@ -1,15 +1,17 @@
 // import slider from "./modules/slider";
 import mousestalker from "./modules/mousestalker";
+import fadein from "./modules/fadein";
+import parallax from "./modules/parallax";
 import pageTop from "./modules/pageTop";
-import parallax from "./modules/slider";
-import slider from "./modules/parallax";
+import slider from "./modules/slider";
 
 document.addEventListener("DOMContentLoaded", () => {
   // slider();
   mousestalker();
+  fadein();
+  parallax();
   pageTop();
   slider();
-  parallax();
 });
 
 // h1のテキストアニメーション
@@ -63,7 +65,7 @@ $(window).on('load', function () {
 $(function () {
   var secArr = new Array();
   var current = -1;
-  var secColor = new Array('#f43b00', '#f43b00', '#0067c0', '#0067c0');
+  var secColor = new Array('#f43b00', '#f43b00', '#f43b00', '#0067c0');
   $('.block').each(function (i) {
     secArr[i] = $(this).offset().top;
   });

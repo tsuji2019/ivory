@@ -2,17 +2,14 @@
 	var slider = [
 		{   
 			images: '/assets/images/slider01.jpg',
-			title: '3',
-			text: '「わかってるから、教えないで！」 期'
+			text: 'わかってるから、<br>教えないで！'
 		},
 		{   
 			images: '/assets/images/slider01.jpg',
-			title: '2',
 			text: ''
 		},
 		{   
 			images: '/assets/images/slider01.jpg',
-			title: '1',
 			text: ''
 		},
 	]
@@ -23,10 +20,8 @@ section#about.scroll-point.block
 			h2 Chatter
 				br 
 				| box
+				span.h2-small おしゃべり娘の一言集
 	.about
-		p.about__text こんなに大きくなったなんて！！
-			br
-			| オカン、うれしわ〜
 		.about__slider
 			.swiper.mySwiper
 				.swiper-wrapper
@@ -34,11 +29,46 @@ section#about.scroll-point.block
 						.swiper-slide.slider-hover
 							img(src= i.images)
 							.slide-detail.mask
-								p.title.caption !{i.title}
-									span.title-small &nbsp;age
 								p.text.caption !{i. text}
 			a.swiper-button-next
 			a.swiper-button-prev
 			.swiper-pagination
 
+#loveit.block
+	.loveit-h2
+		.prlx__parent.prlx__parent2
+			.img__wrapper.prlx__child
+				h2 Love it
+	.loveit 
+		.loveit__bg
+		.loveit__inner
+			img.loveit-img.animatable.bounceInLeft(src='/assets/images/kinari03.png')
+			.loveit__inner__detail
+				.loveit__inner__detail__01
+					p.detail-title あそび
+					p.detail-text おままごと・お母さんごっこ・買いものごっこ・ブロック・ボルダリング
+				.loveit__inner__detail__01
+					p.detail-title キャラクター
+					p.detail-text アンパンマン・妖怪・ヒカキン
+				.loveit__inner__detail__01
+					p.detail-title たべもの
+					p.detail-text 餃子、チョコ
+				.loveit__inner__detail__02
+					//- p Webサイトデザインをメインに、
+					//-     br
+					//-     | Javascriptを学習しつつコーディング業務も行なっております。
+					//-     br
+					//-     | クライアントや作業内容により、PhotoshopとFigmaを使い分けており、
+					//-     br
+					//-     | 新しいツール、知識はできる限り手を出し、
+					//-     br
+					//-     | 作業効率化を含め、アウトプットに向け可能性を広げていきたいと考えています。
+	.loveit-mine 
+		.loveit-mine__images.first-v2#parallax-01
+
+
+//- #stalker
+//- section.sample
+//-     .btn
+//-         a VIEW MORE
 
