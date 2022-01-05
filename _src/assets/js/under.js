@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {});
 
-// Worksのタイトルアニメーション
+// underのタイトルアニメーション
 function BgFadeAnime() {
 
     $('.bgLRextendTrigger').each(function () {
