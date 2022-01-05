@@ -146,21 +146,14 @@ export default function (selector) {
 		}
 
 
-
-		/////////////////////////////////////////
-		//             EXAMPLES                //
-		/////////////////////////////////////////
 		let prlx1 = new PrlxRAF('.prlx__parent1', '.prlx__child', {
 			speed: .2
 		})
-
 
 		let prlx2 = new PrlxRAF('.prlx__parent2', '.prlx__child', {
 			speed: .3,
 			direction: 'x'
 		})
-
-
 
 		// let rotate = 0;
 		// let prlx3 = new PrlxRAF('.prlx__parent3', '.prlx__child', {
@@ -172,14 +165,14 @@ export default function (selector) {
 		// })
 
 
-		// let prlx4 = new PrlxRAF('.prlx__parent4', '.prlx__child', {
-		// 	type: 'scrollspy',
-		// 	offset: 100,
-		// 	scrollspy: {
-		// 		reverse: true,
-		// 		class: 'show'
-		// 	}
-		// })
+		let prlx4 = new PrlxRAF('.prlx__parent4', '.prlx__child', {
+			type: 'scrollspy',
+			offset: 100,
+			scrollspy: {
+				reverse: true,
+				class: 'show'
+			}
+		})
 	}
 
 	init();

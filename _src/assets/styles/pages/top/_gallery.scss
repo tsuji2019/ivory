@@ -1,28 +1,31 @@
 #gallery {
-  padding-top: 20rem;
+  padding-top: 16rem;
   .gallery-h2 {
     position: relative;
     .prlx__parent {
-      margin-bottom: 50px;
-      position: absolute;
-      right: -21rem;
-      z-index: 1;
+      margin-bottom: 5rem;
     }
 
     .img__wrapper {
       position: relative;
-      overflow: hidden;
       h2 {
         font-family: $font-en001;
-        font-size: 22rem;
-        font-weight: 300;
-        font-style: normal;
+        font-size: 12rem;
         line-height: 0.8;
-        letter-spacing: -1rem;
-        text-align: right;
-        padding: 1rem 0;
+        letter-spacing: 0.01em;
+        text-align: center;
         color: $pink;
-        // opacity: 0.6;
+        position: relative;
+        &::after {
+          content: "＊";
+          position: absolute;
+          bottom: -10rem;
+          left: 0;
+          right: 0;
+          font-size: 7rem;
+          font-weight: 400;
+          animation: rotate-anime 6s linear infinite;
+        }
       }
     }
     .scrollspy-example {
@@ -82,173 +85,144 @@
     }
   }
   .gallery {
-    position: relative;
-    padding-top: 16rem;
-    &__inner {
+    margin: 15rem 8rem;
+    .Card {
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
-      margin-top: 12rem;
-      width: 88%;
-      position: relative;
-      padding-bottom: 4rem;
-      &__skill {
-        width: 50%;
-        &__01 {
-          margin-bottom: 1.8rem;
-          p {
-            font-family: $font-en002;
-            font-style: normal;
-            line-height: 1.3;
-            letter-spacing: 0;
-            color: $pink;
-          }
-          .skill-title {
-            font-weight: 400;
-            font-size: 2.2rem;
-            margin-bottom: 0.6rem;
-          }
-          .skill-text {
-            font-weight: 300;
-            font-size: 1.6rem;
-          }
-          .career-title {
-            font-size: 1.6rem;
-            margin-bottom: 0.6rem;
-            font-weight: 400;
-          }
-          .career-text {
-            font-size: 1.2rem;
-            font-weight: 300;
-          }
-        }
-        &__02 {
-          margin-top: 5rem;
-          p {
-            font-size: 1.3rem;
-            font-weight: 400;
-            line-height: 1.8;
-          }
-        }
-      }
-      h3 {
+      width: 100%;
+      &-Item {
+        text-align: center;
+        width: 36rem;
+        cursor: pointer;
+        height: auto;
         position: relative;
-        padding-top: 1rem;
-        // margin-left: 5.8rem;
-        padding-left: 5.8rem;
-        font-family: $font-en001;
-        font-size: 6rem;
-        font-weight: 400;
-        font-style: normal;
-        line-height: 0.8;
-        letter-spacing: -0.2rem;
-        display: block;
-        width: 50%;
-        color: $pink;
-        // &::after {
-        //   content: "";
-        //   display: block;
-        //   width: 0.8rem;
-        //   height: 0.8rem;
-        //   background-color: $orange;
-        //   border-radius: 50%;
-        //   position: absolute;
-        //   top: -4rem;
-        //   left: 0;
-        //   margin-top: 9rem;
+        margin-bottom: -16rem;
+        // &:not(:nth-child(3n-2)) {
+        //   margin-left: 28px;
         // }
-      }
-      // &::after {
-      //   display: block;
-      //   position: absolute;
-      //   bottom: -6rem;
-      //   left: 0;
-      //   // width: calc(88% - 5.6rem);
-      //   width: 88%;
-      //   height: 0.1rem;
-      //   margin: 0 5.8rem;
-      //   background-color: #000;
-      //   content: "";
-      // }
-    }
-    &__inner:nth-child(3) {
-      margin-top: 15rem;
-      &::after {
-        display: none;
+        img {
+          width: 100%;
+          clip-path: inset(0 0 18rem round 5rem);
+        }
       }
     }
-    &__bg {
-      position: absolute;
-      top: 16.7rem;
+    /* ---------------------------- */
+    /* --- ModalSection --- */
+    /* ---------------------------- */
+    .ModalLayer {
+      position: fixed;
+      top: 0;
       left: 0;
-      width: 88%;
-      height: 111rem;
-      background-color: $orange;
-      z-index: -1;
+      width: 100%;
+      height: 100vh;
+      transition: opacity 0.65s;
+      pointer-events: none;
+      opacity: 0;
+      z-index: 10000;
     }
-  }
-  .gallery-mine {
-    width: 100%;
-    padding-top: 10rem;
-    &__images {
-      position: relative;
-      &::before {
-        z-index: 1;
-        height: 100%;
-        width: 100%;
-        background: linear-gradient(
-          rgba(255, 156, 198, 0.9),
-          rgba(255, 156, 198, 0.9)
-        );
-        mix-blend-mode: color-burn;
-        content: "";
-        position: absolute;
-        top: 0;
-      }
+    .ModalLayer.isShow {
+      transition: opacity 0.65s;
+      pointer-events: auto;
+      opacity: 1;
     }
-    &__profile {
-      background-color: $orange;
-      padding: 10rem 0;
-      ul {
-        display: flex;
-        justify-content: space-between;
-        margin: auto;
-        width: 66%;
-        li {
-          p {
-            font-family: $font-en001;
-            font-size: 3rem;
-            font-weight: 400;
-            font-style: normal;
-            line-height: 0.8;
-            letter-spacing: -0.02em;
-          }
-          dl {
-            margin-top: 2rem;
-            font-size: 1.4rem;
-            dt {
-              padding-bottom: 0.8rem;
-              font-weight: 400;
+    .ModalLayer-Mask {
+      position: absolute;
+      background: rgba(0, 0, 0, 0.5);
+      width: 100%;
+      height: 100vh;
+    }
+    .ModalLayer-Inner {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      max-width: 600px;
+      transform: translate(-50%, -50%);
+    }
+    // Swiper部分
+    .Modal {
+      &-Inner {
+        &-Btn {
+          position: absolute;
+          top: -6rem;
+          right: -3rem;
+          // width: 7rem;
+          color: #fff;
+          z-index: 10;
+          cursor: pointer;
+          color: $pink;
+          font-size: 20rem;
+          font-weight: 100;
+        }
+        &-Card {
+          width: 100%;
+
+          &-Wrapper {
+            display: flex;
+
+            &-Slide {
+              width: 100% !important;
+              height: auto;
+
+              &-Item {
+                width: 100%;
+                height: 100%;
+
+                &-Box {
+                  position: relative;
+                  margin-left: auto;
+                  margin-right: auto;
+                  width: 70%;
+                  img {
+                    border-radius: 5rem;
+                  }
+                }
+              }
             }
           }
         }
+        .swiper-button-prev {
+          right: 2.5rem;
+          left: auto;
+          bottom: -6rem;
+        }
+        .swiper-button-next {
+          right: -4.5rem;
+          left: auto;
+          bottom: -6rem;
+        }
       }
     }
-    // パララックス
-    .first-v2 {
-      position: relative;
-      background: url(/assets/images/profile-bg.png);
-      background-size: cover;
-      height: 0%;
-      padding-top: unquote("min(100vh,35%)");
-      // p {
-      //   position: absolute;
-      //   top: 50%;
-      //   left: 50%;
-      //   transform: translate(-50%, -50%);
-      //   color: #fff;
-      //   line-height: 1.5;
-      //   font-size: unquote("max(3vw, 16px)");
-      // }
+  }
+}
+.wrap {
+  display: flex;
+  align-items: center;
+  height: auto;
+  overflow: hidden;
+  .slideshow {
+    display: flex;
+    .content {
+      width: 90rem;
+      p {
+        font-size: 5.5rem;
+        font-weight: 400;
+        color: $pink;
+        letter-spacing: -0.04em;
+      }
     }
+  }
+}
+.slideshow {
+  display: flex;
+  animation: loop-slide 90s infinite linear 1s both;
+}
+@keyframes loop-slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
   }
 }

@@ -4,6 +4,7 @@ import fadein from "./modules/fadein";
 import parallax from "./modules/parallax";
 import pageTop from "./modules/pageTop";
 import slider from "./modules/slider";
+import modal from "./modules/modal";
 
 document.addEventListener("DOMContentLoaded", () => {
   // slider();
@@ -12,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   parallax();
   pageTop();
   slider();
+  modal();
 });
 
 // h1のテキストアニメーション

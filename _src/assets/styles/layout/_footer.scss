@@ -1,11 +1,15 @@
 #footer {
-  padding-top: -100rem;
-  margin-top: 130rem;
-  small {
+  padding: 1rem 0 0;
+  text-align: center;
+  .small {
     color: $black;
     display: block;
     text-align: center;
-    padding: 20px;
+    padding: 1.8rem;
+    color: $orange;
+    background-color: $pink;
+    font-size: 1.2rem;
+    font-weight: 500;
   }
 }
 

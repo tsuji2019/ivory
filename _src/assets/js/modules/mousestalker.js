@@ -7,7 +7,6 @@ export default function (selector) {
 	const mousestalker = () => {
 		const stalker = document.getElementById('stalker');
 
-		//aタグにホバー中かどうかの判別フラグ
 		let hovFlag = false;
 
 		document.addEventListener('mousemove', function (e) {
@@ -16,10 +15,8 @@ export default function (selector) {
 			}
 		});
 
-		//リンクへ吸い付く処理
 		const linkElem = document.querySelectorAll('a:not(.no_stick_)');
 		for (let i = 0; i < linkElem.length; i++) {
-			//マウスホバー時
 			linkElem[i].addEventListener('mouseover', function (e) {
 				hovFlag = true;
 

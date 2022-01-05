@@ -2,15 +2,15 @@
 	var slider = [
 		{   
 			images: '/assets/images/slider01.jpg',
-			text: 'わかってるから、<br>教えないで！'
+			text: '「わかってるから、<br>教えないで！」'
 		},
 		{   
-			images: '/assets/images/slider01.jpg',
-			text: ''
+			images: '/assets/images/slider02.jpg',
+			text: '「ココ座ってみ」'
 		},
 		{   
-			images: '/assets/images/slider01.jpg',
-			text: ''
+			images: '/assets/images/slider03.jpg',
+			text: '「そうだよ!<br>可愛いでしょ〜」'
 		},
 	]
 
@@ -42,33 +42,24 @@ section#about.scroll-point.block
 	.loveit 
 		.loveit__bg
 		.loveit__inner
-			img.loveit-img.animatable.bounceInLeft(src='/assets/images/kinari03.png')
+			.loveit__inner__img.animatable.bounceInLeft
+				p.loveit-name Kinari&nbsp;
+					span.mini age&nbsp;
+					span 3
+				img.loveit-img(src='/assets/images/kinari03.png')
 			.loveit__inner__detail
 				.loveit__inner__detail__01
-					p.detail-title あそび
+					p.detail-title Playing
 					p.detail-text おままごと・お母さんごっこ・買いものごっこ・ブロック・ボルダリング
 				.loveit__inner__detail__01
-					p.detail-title キャラクター
+					p.detail-title Character
 					p.detail-text アンパンマン・妖怪・ヒカキン
 				.loveit__inner__detail__01
-					p.detail-title たべもの
-					p.detail-text 餃子、チョコ
+					p.detail-title Food
+					p.detail-text 餃子、チョコレート
 				.loveit__inner__detail__02
-					//- p Webサイトデザインをメインに、
-					//-     br
-					//-     | Javascriptを学習しつつコーディング業務も行なっております。
-					//-     br
-					//-     | クライアントや作業内容により、PhotoshopとFigmaを使い分けており、
-					//-     br
-					//-     | 新しいツール、知識はできる限り手を出し、
-					//-     br
-					//-     | 作業効率化を含め、アウトプットに向け可能性を広げていきたいと考えています。
+			.loveit__inner__gyoza
+				img(src='/assets/images/img01.png')
 	.loveit-mine 
 		.loveit-mine__images.first-v2#parallax-01
-
-
-//- #stalker
-//- section.sample
-//-     .btn
-//-         a VIEW MORE
 
